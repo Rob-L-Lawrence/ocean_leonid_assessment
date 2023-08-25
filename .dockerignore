@@ -1,4 +1,10 @@
+# VSCODE
 .vscode/
+
+# PYTHON
 venv/
 __pycache__
 *.ipynb
+
+# Dev files
+dev.*
