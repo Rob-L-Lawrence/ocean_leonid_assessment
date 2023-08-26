@@ -9,4 +9,4 @@ RUN poetry install
 
 EXPOSE 8050
 
-CMD ["python", "./ocean_leonid/run.py"]
+CMD ["python", "main.py"]

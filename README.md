@@ -11,7 +11,7 @@ To get started with the raw code, clone the repo and then run the following comm
 ```shell
 pip install poetry
 poetry install
-python ./ocean_leonid/run.py
+python main.py
 ```
 
 The dash app is now available on your browser at `http://localhost:8050`.
@@ -26,6 +26,10 @@ docker container run -p 8050:8050  ocean_leonid
 ```
 
 The dash app is now available on your browser at `http://localhost:8050`.
+
+**Pip package**
+
+
 
 ## Tests
 
