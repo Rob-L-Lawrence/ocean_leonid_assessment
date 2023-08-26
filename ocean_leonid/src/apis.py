@@ -3,6 +3,10 @@ import io
 import pandas as pd
 import requests
 
+from .exceptions import ApiFailed
+
+pd.options.mode.chained_assignment = None
+
 
 def get_uk_data() -> pd.DataFrame:
     # Make the call to the API
@@ -13,6 +17,9 @@ def get_uk_data() -> pd.DataFrame:
             "format": "csv",
         },
     )
+
+    if res.status_code != 200:
+        raise ApiFailed("get_uk_data")
 
     # Convert the data into a raw dataframe
     raw_data = pd.read_csv(
@@ -51,6 +58,9 @@ def get_au_data() -> pd.DataFrame:
             "format": "csv",
         },
     )
+
+    if res.status_code != 200:
+        raise ApiFailed("get_au_data")
 
     # Convert the data into a raw dataframe
     raw_data = pd.read_csv(io.StringIO(res.content.decode("utf-8")))

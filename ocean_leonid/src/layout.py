@@ -4,7 +4,7 @@ from dash import dcc, html
 from .apis import get_combine_data
 
 
-def layout():
+def get_layout():
     df = get_combine_data()
 
     fig = go.Figure()
