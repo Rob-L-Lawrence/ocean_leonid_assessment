@@ -29,20 +29,10 @@ The dash app is now available on your browser at `http://localhost:8050`.
 
 **Pip package**
 
-I havent been able to create a PyPi account.
-But if I had then all that would need to be done is configure the credentials and then:
+I have created the module as [PyPi package](https://pypi.org/project/ocean-leonid/) that can be installed.
 
 ```shell
-poetry build
-poetry publish
-```
-
-<br>
-
-Then to use the package:
-
-```shell
-pip install ocean_leonid
+pip install ocean-leonid
 ```
 
 ```py
